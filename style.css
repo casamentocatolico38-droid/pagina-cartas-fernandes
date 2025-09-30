@@ -1,0 +1,25 @@
+/* --- VERSÃO FINAL E CORRIGIDA DO DESIGN --- */
+
+/* Importando as fontes Lora (para títulos) e Montserrat (para textos) */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+/* ESTA É A VERSÃO CORRIGIDA QUE DEIXA O LAYOUT FLUIR NATURALMENTE */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfaf6; /* Fundo bege/off-white sutil */
+    color: #34495e; /* Tom de chumbo/cinza-azulado para o texto */
+    margin: 0;
+    padding: 40px 20px; /* Espaçamento interno para o conteúdo não colar nas bordas */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08); /* Sombra delicada */
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    margin:
