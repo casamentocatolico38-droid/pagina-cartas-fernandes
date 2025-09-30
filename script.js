@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     formulario.addEventListener('submit', function(event) {
         
         // event.preventDefault() impede que a página recarregue, que é o comportamento padrão de um formulário.
-        event.preventDefault();
+        // event.preventDefault();
 
         // Aqui você poderia adicionar um código para realmente enviar os dados para um serviço de e-mail marketing, mas por enquanto vamos apenas simular.
         console.log('Formulário enviado!');
@@ -22,5 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
         secaoConfirmacao.style.display = 'block';
 
     });
+
 
 });
