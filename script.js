@@ -1,42 +1,42 @@
-// VERSÃO FINAL COM AJAX - Envia para o Formspree sem sair da página
+// VERSÃO DEFINITIVA COM FETCH (AJAX)
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // 1. Pega os elementos do HTML
+    // Pega os elementos do HTML que vamos manipular
     const formulario = document.getElementById('meuFormulario');
     const secaoFormulario = document.getElementById('formulario-inscricao');
     const secaoConfirmacao = document.getElementById('secao-confirmacao');
 
-    // 2. Adiciona o "ouvinte" de envio ao formulário
+    // Adiciona um "ouvinte" que espera o formulário ser enviado
     formulario.addEventListener('submit', function(event) {
         
-        // 3. Previne o comportamento padrão do navegador (que é recarregar a página)
+        // A LINHA MAIS IMPORTANTE: Previne que a página seja recarregada
         event.preventDefault();
 
-        // 4. Coleta todos os dados do formulário
+        // Cria um objeto com todos os dados do formulário
         const formData = new FormData(formulario);
         
-        // 5. Envia os dados para o Formspree "nos bastidores" usando fetch (AJAX)
+        // AQUI ESTÁ O FETCH: Envia os dados para o Formspree em segundo plano
         fetch(formulario.action, {
             method: 'POST',
             body: formData,
             headers: {
-                'Accept': 'application/json' // Pede uma resposta em formato JSON
+                'Accept': 'application/json' 
             }
         }).then(response => {
-            // 6. Se a resposta do Formspree for "ok"...
+            // Se a resposta do servidor for "ok" (sucesso)...
             if (response.ok) {
-                // 7. Esconde o formulário e mostra a nossa seção de confirmação!
+                // ...então nós escondemos o formulário e mostramos nossa mensagem de sucesso!
                 secaoFormulario.style.display = 'none';
                 secaoConfirmacao.style.display = 'block';
             } else {
-                // Se o Formspree retornar um erro, avisa o usuário.
-                alert('Ocorreu um erro ao enviar. Por favor, tente novamente.');
+                // Se o Formspree retornar algum erro, avisamos o usuário
+                alert('Ocorreu um erro ao enviar o formulário. Por favor, tente novamente mais tarde.');
             }
         }).catch(error => {
-            // Se houver um erro de rede (sem internet, etc), avisa o usuário.
-            console.error('Erro:', error);
-            alert('Não foi possível enviar o formulário. Verifique sua conexão.');
+            // Se houver um erro de conexão (internet, etc), também avisamos o usuário
+            console.error('Erro de rede:', error);
+            alert('Não foi possível enviar o formulário. Verifique sua conexão com a internet.');
         });
     });
 });
