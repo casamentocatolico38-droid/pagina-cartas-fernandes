@@ -1,121 +1,138 @@
-/* --- VERSÃO FINAL E CORRIGIDA DO DESIGN --- */
+/* Importando a fonte */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
 
-/* Importando as fontes Lora (para títulos) e Montserrat (para textos) */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600&display=swap');
+/* Configurações Globais */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* --- AJUSTE FINAL DE LAYOUT --- */
-
-/* MUDANÇA AQUI: Adicionamos display:flex para controlar o layout verticalmente */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fdfaf6;
-    color: #34495e;
-    margin: 0;
-    padding: 40px 20px;
-    box-sizing: border-box;
-    /* NOVAS LINHAS PARA FAZER O LAYOUT OCUPAR A TELA */
+    background-color: #f0f2f5; /* Fundo cinza claro, como na referência */
+    color: #333;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh; /
+    align-items: flex-start; /* Alinha o container no topo */
+    min-height: 100vh;
+    padding: 40px 20px; /* Espaçamento para o container não colar nas bordas */
 }
 
+/* Container Principal */
 .container {
-    background-color: #ffffff;
-    padding: 50px;
-    border-radius: 8px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    max-width: 600px;
     width: 100%;
-    text-align: center;
-    box-sizing: border-box;
-  
+    max-width: 680px; /* Largura máxima do conteúdo, como na referência */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
-.logo {
-    max-width: 120px;
-    margin-bottom: 25px;
+/* Imagem do Cabeçalho */
+.imagem-cabecalho {
+    width: 120px; /* Tamanho do logo/imagem */
+    height: 120px;
+    display: block;
+    margin: 0 auto 25px auto; /* Centraliza a imagem */
+    border-radius: 50%; /* Deixa a imagem redonda, um toque de estilo */
+    object-fit: cover; /* Garante que a imagem não fique distorcida */
 }
 
+/* Textos */
 h1 {
-    font-family: 'Lora', serif;
-    color: #2c3e50; /* Tom de chumbo mais escuro para o título */
-    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1c1e21; /* Cor mais escura para o título */
+    font-size: 2em;
+    font-weight: 700;
 }
 
 p {
-    line-height: 1.7; /* Aumenta o espaço entre as linhas */
-    margin-bottom: 1.2em;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #555;
+    font-size: 1.1em;
 }
 
+/* Formulário */
 form {
     text-align: left;
-    margin-top: 35px;
 }
 
 label {
     display: block;
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 600;
-    color: #2c3e50;
+    color: #444;
 }
 
 input[type="email"] {
     width: 100%;
     padding: 15px;
-    border: 1px solid #dfe6e9;
-    border-radius: 5px;
-    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 6px;
     font-size: 16px;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 input[type="email"]:focus {
-    border-color: #c0a157; /* A borda fica dourada ao digitar */
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
     outline: none;
 }
 
 .radio-group {
-    background-color: #f8f9fa;
-    padding: 15px 20px;
-    border-radius: 5px;
-    border: 1px solid #dfe6e9;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    border: 1px solid #eee;
 }
 
 .radio-group label {
     font-weight: 400;
     margin-top: 5px;
     margin-bottom: 5px;
-    color: #34495e;
 }
 
+/* Botão Principal */
 button, .botao-whatsapp {
-    background-color: #c0a157; /* Cor dourada/mostarda */
-    color: white;
-    padding: 18px 20px;
-    border: none;
-    border-radius: 5px;
     width: 100%;
-    font-size: 16px;
-    font-weight: 600;
+    padding: 15px;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #00A884; /* Verde similar ao do WhatsApp/referência */
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
     cursor: pointer;
-    margin-top: 30px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
-    box-shadow: 0 4px 10px rgba(192, 161, 87, 0.3);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
 button:hover, .botao-whatsapp:hover {
-    background-color: #a98e4b;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(192, 161, 87, 0.4);
+    background-color: #008f70;
 }
 
-#secao-confirmacao p {
-    font-size: 1.1em;
+/* Seção de Confirmação */
+#secao-confirmacao {
+    text-align: center;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
 }
