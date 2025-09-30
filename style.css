@@ -3,23 +3,119 @@
 /* Importando as fontes Lora (para títulos) e Montserrat (para textos) */
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600&display=swap');
 
-/* ESTA É A VERSÃO CORRIGIDA QUE DEIXA O LAYOUT FLUIR NATURALMENTE */
+/* --- AJUSTE FINAL DE LAYOUT --- */
+
+/* MUDANÇA AQUI: Adicionamos display:flex para controlar o layout verticalmente */
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #fdfaf6; /* Fundo bege/off-white sutil */
-    color: #34495e; /* Tom de chumbo/cinza-azulado para o texto */
+    background-color: #fdfaf6;
+    color: #34495e;
     margin: 0;
-    padding: 40px 20px; /* Espaçamento interno para o conteúdo não colar nas bordas */
+    padding: 40px 20px;
     box-sizing: border-box;
+    /* NOVAS LINHAS PARA FAZER O LAYOUT OCUPAR A TELA */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /
 }
 
 .container {
     background-color: #ffffff;
     padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08); /* Sombra delicada */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
     max-width: 600px;
     width: 100%;
     text-align: center;
     box-sizing: border-box;
-    margin:
+  
+}
+
+.logo {
+    max-width: 120px;
+    margin-bottom: 25px;
+}
+
+h1 {
+    font-family: 'Lora', serif;
+    color: #2c3e50; /* Tom de chumbo mais escuro para o título */
+    font-size: 2.2em;
+}
+
+p {
+    line-height: 1.7; /* Aumenta o espaço entre as linhas */
+    margin-bottom: 1.2em;
+}
+
+form {
+    text-align: left;
+    margin-top: 35px;
+}
+
+label {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus {
+    border-color: #c0a157; /* A borda fica dourada ao digitar */
+    outline: none;
+}
+
+.radio-group {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #dfe6e9;
+}
+
+.radio-group label {
+    font-weight: 400;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #34495e;
+}
+
+button, .botao-whatsapp {
+    background-color: #c0a157; /* Cor dourada/mostarda */
+    color: white;
+    padding: 18px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(192, 161, 87, 0.3);
+    transition: all 0.3s ease;
+}
+
+button:hover, .botao-whatsapp:hover {
+    background-color: #a98e4b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(192, 161, 87, 0.4);
+}
+
+#secao-confirmacao p {
+    font-size: 1.1em;
+}
