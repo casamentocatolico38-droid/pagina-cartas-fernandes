@@ -1,0 +1,98 @@
+/* Importando uma fonte bonita do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Estilos gerais para a página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f4f4f9; /* Um cinza bem claro para o fundo */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Estilo do container principal */
+.container {
+    background-color: #ffffff; /* Fundo branco para o conteúdo */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 600px;
+    width: 90%;
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilo do logotipo/imagem */
+.logo {
+    max-width: 150px; /* Ajuste o tamanho conforme sua imagem */
+    margin-bottom: 20px;
+}
+
+/* Estilos dos textos */
+h1 {
+    color: #005a8d; /* Um azul sóbrio */
+}
+
+p {
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+/* Estilos do formulário */
+form {
+    text-align: left; /* Alinha os textos do formulário à esquerda */
+    margin-top: 30px;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.radio-group label {
+    font-weight: normal; /* Deixa o texto das opções de rádio normal */
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+/* Estilo dos grupos de botões de rádio */
+.radio-group {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+.radio-group input {
+    margin-right: 10px;
+}
+
+/* Estilo do botão principal */
+button, .botao-whatsapp {
+    background-color: #007bff; /* Um azul mais vibrante para o botão */
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer; /* Muda o cursor para uma mãozinha */
+    margin-top: 30px;
+    text-transform: uppercase;
+    text-decoration: none; /* Remove sublinhado de links */
+    display: inline-block; /* Faz o link se comportar como um botão */
+}
+
+button:hover, .botao-whatsapp:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
