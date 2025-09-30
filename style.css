@@ -4,16 +4,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600&display=swap');
 
 /* MUDANÇA: Cores e fontes base para um visual mais acolhedor */
+/* VERSÃO CORRIGIDA */
 body {
-    font-family: 'Montserrat', sans-serif; /* Fonte padrão para os textos */
-    background-color: #fdfaf6; /* Um fundo bege/off-white muito sutil */
-    color: #34495e; /* Um tom de chumbo/cinza-azulado para o texto, mais suave que o preto */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fdfaf6;
+    color: #34495e;
     margin: 0;
-    padding: 20px 0; /* Adiciona um espaço caso o conteúdo seja maior que a tela */
+    /* MUDANÇA: Adicionamos padding (espaçamento interno) para o conteúdo não colar nas bordas */
+    padding: 40px 20px;
+    box-sizing: border-box; /* Boa prática para o layout funcionar como esperado */
 }
 
 /* MUDANÇA: Mais espaçamento interno (padding) e sombra mais suave */
@@ -21,11 +20,12 @@ body {
     background-color: #ffffff;
     padding: 50px;
     border-radius: 8px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08); /* Sombra mais delicada */
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
     max-width: 600px;
-    width: 90%;
+    width: 100%; /* Ajuste para melhor responsividade */
     text-align: center;
     box-sizing: border-box;
+    margin: 0 auto; /* NOVO: Garante a centralização horizontal */
 }
 
 /* MUDANÇA: Estilo para a imagem/logo */
