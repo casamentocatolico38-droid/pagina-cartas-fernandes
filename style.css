@@ -1,98 +1,122 @@
-/* Importando uma fonte bonita do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+/* --- VERSÃO 2.0 DO DESIGN --- */
 
-/* Estilos gerais para a página */
+/* Importando duas fontes do Google Fonts: Lora para títulos e Montserrat para textos */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Montserrat:wght@400;600&display=swap');
+
+/* MUDANÇA: Cores e fontes base para um visual mais acolhedor */
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #f4f4f9; /* Um cinza bem claro para o fundo */
-    color: #333;
+    font-family: 'Montserrat', sans-serif; /* Fonte padrão para os textos */
+    background-color: #fdfaf6; /* Um fundo bege/off-white muito sutil */
+    color: #34495e; /* Um tom de chumbo/cinza-azulado para o texto, mais suave que o preto */
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
+    padding: 20px 0; /* Adiciona um espaço caso o conteúdo seja maior que a tela */
 }
 
-/* Estilo do container principal */
+/* MUDANÇA: Mais espaçamento interno (padding) e sombra mais suave */
 .container {
-    background-color: #ffffff; /* Fundo branco para o conteúdo */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08); /* Sombra mais delicada */
     max-width: 600px;
     width: 90%;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
+    box-sizing: border-box;
 }
 
-/* Estilo do logotipo/imagem */
+/* MUDANÇA: Estilo para a imagem/logo */
 .logo {
-    max-width: 150px; /* Ajuste o tamanho conforme sua imagem */
-    margin-bottom: 20px;
+    max-width: 120px;
+    margin-bottom: 25px;
 }
 
-/* Estilos dos textos */
+/* MUDANÇA: Usando a fonte Lora para dar um toque de elegância ao título */
 h1 {
-    color: #005a8d; /* Um azul sóbrio */
+    font-family: 'Lora', serif;
+    color: #2c3e50; /* Tom de chumbo mais escuro para o título */
+    font-size: 2.2em; /* Tamanho maior */
 }
 
 p {
-    line-height: 1.6; /* Melhora a legibilidade */
+    line-height: 1.7; /* Aumenta o espaço entre as linhas do parágrafo */
+    margin-bottom: 1.2em;
 }
 
-/* Estilos do formulário */
+/* --- ESTILOS REFINADOS PARA O FORMULÁRIO --- */
 form {
-    text-align: left; /* Alinha os textos do formulário à esquerda */
-    margin-top: 30px;
+    text-align: left;
+    margin-top: 35px;
 }
 
 label {
     display: block;
-    margin-top: 20px;
-    margin-bottom: 8px;
-    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-weight: 600; /* Um pouco mais de peso na fonte */
+    color: #2c3e50;
+}
+
+/* MUDANÇA: Input de e-mail com borda que muda de cor ao ser selecionada */
+input[type="email"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dfe6e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease; /* NOVO: Efeito de transição suave */
+}
+
+input[type="email"]:focus {
+    border-color: #c0a157; /* A borda fica dourada ao digitar */
+    outline: none; /* Remove a borda azul padrão do navegador */
+}
+
+.radio-group {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-radius: 5px;
+    border: 1px solid #dfe6e9;
 }
 
 .radio-group label {
-    font-weight: normal; /* Deixa o texto das opções de rádio normal */
+    font-weight: 400; /* Peso normal para as opções */
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #34495e;
 }
 
-input[type="email"] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box; /* Garante que o padding não aumente a largura */
-}
-
-/* Estilo dos grupos de botões de rádio */
-.radio-group {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #eee;
-}
-
-.radio-group input {
-    margin-right: 10px;
-}
-
-/* Estilo do botão principal */
+/* MUDANÇA: Botão com a nova cor, sombra e transição suave */
 button, .botao-whatsapp {
-    background-color: #007bff; /* Um azul mais vibrante para o botão */
+    background-color: #c0a157; /* Cor dourada/mostarda */
     color: white;
-    padding: 15px 20px;
+    padding: 18px 20px;
     border: none;
     border-radius: 5px;
     width: 100%;
     font-size: 16px;
-    font-weight: bold;
-    cursor: pointer; /* Muda o cursor para uma mãozinha */
+    font-weight: 600;
+    cursor: pointer;
     margin-top: 30px;
     text-transform: uppercase;
-    text-decoration: none; /* Remove sublinhado de links */
-    display: inline-block; /* Faz o link se comportar como um botão */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(192, 161, 87, 0.3); /* Sombra sutil na cor do botão */
+    transition: all 0.3s ease; /* NOVO: Transição para todos os efeitos */
 }
 
 button:hover, .botao-whatsapp:hover {
-    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+    background-color: #a98e4b; /* Tom mais escuro ao passar o mouse */
+    transform: translateY(-2px); /* NOVO: Eleva um pouco o botão */
+    box-shadow: 0 6px 15px rgba(192, 161, 87, 0.4);
+}
+
+/* Estilos para a seção de confirmação */
+#secao-confirmacao p {
+    font-size: 1.1em;
 }
