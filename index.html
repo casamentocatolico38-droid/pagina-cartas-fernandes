@@ -8,66 +8,28 @@
 </head>
 <body>
 
-    <div class="container">
-
+    <main class="container">
         <div id="formulario-inscricao">
-            <img src="logo-placeholder.png" alt="Logo Cartas do Fernandes" class="logo">
+            <img src="logo.png" alt="Foto do Fernandes" class="foto-perfil">
             
             <h1>Cartas do Fernandes</h1>
-            <p>Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Utilizo referências cristãs, histórias de casais e de santos e sempre compartilho alguma coisa qualquer da rotina real que eu vivo ou que passe pela minha cabeça. Envio uma nova edição toda segunda-feira, às 12h.</p>
-            <p><strong>Para entrar, responda a estas 4 perguntas rápidas abaixo.</strong> Elas me ajudam a criar as melhores cartas para você!</p>
             
-            <form id="meuFormulario" action="https://formspree.io/f/mzzjrqpq" method="POST">
-                <label for="email">Seu melhor e-mail:</label>
-                <input type="email" id="email" name="email" placeholder="seu-melhor-email@exemplo.com" required>
-
-                <label>Por onde você me conheceu?</label>
-                <div class="radio-group">
-                    <input type="radio" id="conheceu-anuncio" name="conheceu" value="Anuncio"><label for="conheceu-anuncio">Anúncio no Instagram / Facebook</label><br>
-                    <input type="radio" id="conheceu-indicacao" name="conheceu" value="Indicacao"><label for="conheceu-indicacao">Indicação de um amigo(a) ou padre</label><br>
-                    <input type="radio" id="conheceu-conteudo" name="conheceu" value="Conteudo"><label for="conheceu-conteudo">Conteúdo no Instagram</label><br>
-                    <input type="radio" id="conheceu-pesquisa" name="conheceu" value="Pesquisa"><label for="conheceu-pesquisa">Pesquisa no Google ou YouTube</label><br>
-                    <input type="radio" id="conheceu-outro" name="conheceu" value="Outro"><label for="conheceu-outro">Outro</label><br>
-                </div>
-
-                <label>Sobre o que você mais gostaria de aprender nas "Cartas"?</label>
-                 <div class="radio-group">
-                    <input type="radio" id="aprender-comunicacao" name="aprender" value="Comunicacao"><label for="aprender-comunicacao">Melhorar a comunicação e diminuir as brigas.</label><br>
-                    <input type="radio" id="aprender-romance" name="aprender" value="Romance"><label for="aprender-romance">Reconectar a intimidade e o romance.</label><br>
-                    <input type="radio" id="aprender-fe" name="aprender" value="Fe"><label for="aprender-fe">Dicas práticas para viver a fé em casal.</label><br>
-                    <input type="radio" id="aprender-crises" name="aprender" value="Crises"><label for="aprender-crises">Como lidar com crises e perdoar.</label><br>
-                    <input type="radio" id="aprender-filhos" name="aprender" value="Filhos"><label for="aprender-filhos">Educação dos filhos e valores da família.</label><br>
-                </div>
-
-                <label>Vocês têm filhos?</label>
-                <div class="radio-group">
-                    <input type="radio" id="filhos-sim" name="filhos" value="Sim"><label for="filhos-sim">Sim</label><br>
-                    <input type="radio" id="filhos-nao" name="filhos" value="Nao"><label for="filhos-nao">Não</label><br>
-                    <input type="radio" id="filhos-ainda-nao" name="filhos" value="AindaNao"><label for="filhos-ainda-nao">Ainda não, mas planejamos ter</label><br>
-                </div>
-
-                <label>Pensando no seu casamento hoje, em qual momento vocês se sentem?</label>
-                <div class="radio-group">
-                    <input type="radio" id="momento-fortaleza" name="momento" value="Fortaleza"><label for="momento-fortaleza">Momento Fortaleza</label><br>
-                    <input type="radio" id="momento-desafio" name="momento" value="Desafio"><label for="momento-desafio">Momento Desafio</label><br>
-                    <input type="radio" id="momento-urgencia" name="momento" value="Urgencia"><label for="momento-urgencia">Momento Urgência</label><br>
-                    <input type="radio" id="momento-nao-responder" name="momento" value="NaoResponder"><label for="momento-nao-responder">Prefiro não responder</label><br>
-                </div>
-                
-                <button type="submit">GARANTIR MINHA VAGA</button>
+            <p>Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Envio uma nova edição toda segunda-feira, às 12h.</p>
+            
+            <form id="meuFormulario" action="https://formspree.io/f/SEU_CODIGO_UNICO_AQUI" method="POST">
+                <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required>
+                <button type="submit">Quero Receber as Cartas</button>
             </form>
         </div>
 
         <div id="secao-confirmacao" style="display: none;">
-            <img src="logo-placeholder.png" alt="Logo Cartas do Fernandes" class="logo">
+            <img src="logo.png" alt="Foto do Fernandes" class="foto-perfil">
             <h1>Sua vaga está garantida!</h1>
             <p>Toque no link abaixo para entrar no Grupo de WhatsApp agora mesmo. Te vejo lá!</p>
-            <a href=https://chat.whatsapp.com/HHXOLk2rKgsD83THfj7sRU?mode=ems_copy_t class="botao-whatsapp">ENTRAR NO GRUPO DE WHATSAPP</a>
+            <a href="LINK_DO_SEU_GRUPO_AQUI" class="botao-whatsapp">Entrar no Grupo</a>
         </div>
-    </div>
+    </main>
 
     <script src="script.js"></script>
-
 </body>
-
 </html>
