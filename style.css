@@ -15,7 +15,7 @@ body {
     background-color: #E5E5E5; /* Fundo cinza muito claro */
     color: #1f2937; /* Cor do texto principal (quase preto) */
     display: auto;
-    justify-content: left;
+    justify-content: center;
     align-items: left;
     min-height: 100vh;
 }
@@ -114,6 +114,7 @@ button:hover {
         flex-direction: column; /* No celular, o botão fica embaixo do input */
     }
 }
+
 
 
 
