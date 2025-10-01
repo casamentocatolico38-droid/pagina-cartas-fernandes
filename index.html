@@ -1,40 +1,325 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cartas do Fernandes</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset básico e configurações globais, replicando o fundo e a fonte da referência */
+        :root {
+            --background-color: #f7f7f7;
+            --container-color: #ffffff;
+            --text-color: #2d3748;
+            --primary-color: #3182ce;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container principal, centralizado e com largura máxima como na referência */
+        .container {
+            width: 100%;
+            max-width: 620px;
+            margin-top: 5vh;
+            text-align: center;
+        }
+
+        /* Imagem de perfil, circular e com sombra sutil */
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 24px;
+            border: 3px solid var(--container-color);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Título principal */
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        /* Parágrafo de descrição */
+        .description {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            color: #4a5568;
+        }
+        
+        /* Estilo para a chamada do formulário */
+        .form-intro {
+            font-size: 16px;
+            margin-bottom: 32px;
+            font-weight: 700;
+        }
+
+        /* Estilo geral do formulário */
+        #main-form {
+            background-color: var(--container-color);
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+        
+        /* Esconde a tela de sucesso por padrão */
+        #success-message {
+            display: none;
+            background-color: var(--container-color);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+        
+        .success-text {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        /* Grupos de campos do formulário */
+        .form-group {
+            margin-bottom: 28px;
+        }
+        
+        /* Rótulos e Legendas (perguntas) */
+        label, legend {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        /* Campo de e-mail */
+        input[type="email"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 16px;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        input[type="email"]:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.2);
+        }
+
+        /* Opções de rádio */
+        .radio-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        
+        .radio-option:hover {
+            background-color: #f7fafc;
+        }
+
+        .radio-option input[type="radio"] {
+            margin-right: 12px;
+            accent-color: var(--primary-color);
+        }
+
+        .radio-option label {
+            font-weight: 400;
+            margin-bottom: 0;
+            flex: 1;
+        }
+        
+        /* Botão de envio */
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #2b6cb0;
+        }
+        
+        /* Botão de entrar no grupo (tela de sucesso) */
+        .whatsapp-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+        }
+
+    </style>
 </head>
 <body>
 
-    <main class="pagina-dividida">
-        <div class="coluna-imagem">
-            </div>
+    <div class="container">
+        <header>
+            <img src="https://via.placeholder.com/100" alt="Foto de Fernandes" class="profile-image">
+            <h1>Cartas do Fernandes</h1>
+            <p class="description">
+                Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Utilizo referências cristãs, histórias de casais e de santos e sempre compartilho alguma coisa qualquer da rotina real que eu vivo ou que passe pela minha cabeça. Envio uma nova edição toda segunda-feira, às 12h.
+            </p>
+            <p class="form-intro">
+                Para entrar, responda a estas 4 perguntas rápidas abaixo. Elas me ajudam a criar as melhores cartas para você!
+            </p>
+        </header>
 
-        <div class="coluna-formulario">
-            <div class="conteudo-formulario">
-
-                <div id="formulario-inscricao">
-                    <h1>Cartas do Fernandes</h1>
-                    <p>Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Envio uma nova edição toda segunda-feira, às 12h.</p>
-                    
-                    <form id="meuFormulario" action="https://formspree.io/f/SEU_CODIGO_UNICO_AQUI" method="POST">
-                        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
-                        <button type="submit">Quero Receber as Cartas</button>
-                    </form>
+        <main>
+            <form id="main-form">
+                
+                <div class="form-group">
+                    <label for="email">Seu melhor e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
                 </div>
 
-                <div id="secao-confirmacao" style="display: none;">
-                    <h1>Sua vaga está garantida!</h1>
-                    <p>Toque no link abaixo para entrar no Grupo de WhatsApp agora mesmo. Te vejo lá!</p>
-                    <a href="LINK_DO_SEU_GRUPO_AQUI" class="botao-whatsapp">Entrar no Grupo de WhatsApp</a>
-                </div>
-            </div>
-        </div>
-    </main>
+                <fieldset class="form-group">
+                    <legend>Por onde você me conheceu?</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="conheceu-anuncio" name="conheceu" value="Anuncio" required>
+                        <label for="conheceu-anuncio">Anúncio no Instagram / Facebook</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="conheceu-indicacao" name="conheceu" value="Indicacao">
+                        <label for="conheceu-indicacao">Indicação de um amigo(a) ou padre</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="conheceu-conteudo" name="conheceu" value="Conteudo">
+                        <label for="conheceu-conteudo">Conteúdo no Instagram (Reels, Posts, Stories)</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="conheceu-pesquisa" name="conheceu" value="Pesquisa">
+                        <label for="conheceu-pesquisa">Pesquisa no Google ou YouTube</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="conheceu-outro" name="conheceu" value="Outro">
+                        <label for="conheceu-outro">Outro</label>
+                    </div>
+                </fieldset>
 
-    <script src="script.js"></script>
+                <fieldset class="form-group">
+                    <legend>Sobre o que você mais gostaria de aprender nas "Cartas"?</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="aprender-comunicacao" name="aprender" value="Comunicacao" required>
+                        <label for="aprender-comunicacao">Melhorar a comunicação e diminuir as brigas do dia a dia.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="aprender-intimidade" name="aprender" value="Intimidade">
+                        <label for="aprender-intimidade">Reconectar a intimidade, o romance e a vida a dois.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="aprender-fe" name="aprender" value="Fe">
+                        <label for="aprender-fe">Dicas práticas para viver a fé e a oração em casal.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="aprender-crises" name="aprender" value="Crises">
+                        <label for="aprender-crises">Como lidar com crises, perdoar e superar momentos difíceis.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="aprender-filhos" name="aprender" value="Filhos">
+                        <label for="aprender-filhos">Ajudar na educação dos filhos e nos valores da família.</label>
+                    </div>
+                </fieldset>
+                
+                <fieldset class="form-group">
+                    <legend>Vocês têm filhos?</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="filhos-sim" name="filhos" value="Sim" required>
+                        <label for="filhos-sim">Sim</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="filhos-nao" name="filhos" value="Nao">
+                        <label for="filhos-nao">Não</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="filhos-planejamos" name="filhos" value="Planejamos">
+                        <label for="filhos-planejamos">Ainda não, mas planejamos ter</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>Pensando com sinceridade no seu casamento hoje, em qual destes momentos vocês se sentem?</legend>
+                    <div class="radio-option">
+                        <input type="radio" id="momento-fortaleza" name="momento" value="Fortaleza" required>
+                        <label for="momento-fortaleza"><b>Momento Fortaleza:</b> Estamos bem, mas queremos blindar e fortalecer ainda mais nossa união.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="momento-desafio" name="momento" value="Desafio">
+                        <label for="momento-desafio"><b>Momento Desafio:</b> Temos alguns desafios e atritos que gostaríamos de resolver para voltar a ter mais harmonia.</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" COLOQUE O SEU LINK DO GRUPO DE WHATSAPP AQUI -->
+                <a href="https://wa.me/SEU_NUMERO_AQUI" class="whatsapp-btn" target="_blank">Entrar no Grupo de WhatsApp</a>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Seleciona o formulário e a tela de sucesso
+        const mainForm = document.getElementById('main-form');
+        const successMessage = document.getElementById('success-message');
+
+        // Adiciona um "ouvinte" para o evento de envio do formulário
+        mainForm.addEventListener('submit', function(event) {
+            // Previne o comportamento padrão (que seria recarregar a página)
+            event.preventDefault();
+
+            // Aqui você integraria com sua ferramenta de e-mail marketing para enviar os dados.
+            // Por agora, vamos apenas simular o sucesso.
+            
+            // Esconde o formulário
+            mainForm.style.display = 'none';
+            
+            // Mostra a mensagem de sucesso
+            successMessage.style.display = 'block';
+
+            // Rola a tela para o topo para que o usuário veja a mensagem
+            window.scrollTo(0, 0);
+        });
+    </script>
 
 </body>
 </html>
