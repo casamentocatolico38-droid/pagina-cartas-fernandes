@@ -1,10 +1,14 @@
-/* Reset básico e configurações globais, replicando o fundo e a fonte da referência */
+/* 1. VARIÁVEIS E CONFIGURAÇÕES GLOBAIS */
 :root {
     --background-color: #f7f7f7;
     --container-color: #ffffff;
-    --text-color: #2d3748;
+    --text-color-primary: #2d3748;
+    --text-color-secondary: #4a5568;
     --primary-color: #3182ce;
+    --primary-color-hover: #2b6cb0;
     --border-color: #e2e8f0;
+    --whatsapp-color: #25D366;
+    --whatsapp-color-hover: #128C7E;
 }
 
 * {
@@ -16,58 +20,188 @@
 body {
     font-family: 'Manrope', sans-serif;
     background-color: var(--background-color);
-    color: var(--text-color);
+    color: var(--text-color-primary);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    min-height: 100vh;
     padding: 20px;
 }
 
-/* Container principal, centralizado e com largura máxima como na referência */
+/* 2. LAYOUT PRINCIPAL */
 .container {
     width: 100%;
     max-width: 620px;
-    margin-top: 5vh;
     text-align: center;
 }
 
-/* Imagem de perfil, circular e com sombra sutil */
+/* 3. CABEÇALHO (HEADER) */
+header {
+    margin-top: 5vh;
+}
+
 .profile-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 24px;
-    border: 3px solid var(--container-color);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Título principal */
 h1 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 16px;
 }
 
-/* Parágrafo de descrição */
 .description {
     font-size: 18px;
     line-height: 1.6;
+    color: var(--text-color-secondary);
     margin-bottom: 32px;
-    color: #4a5568;
 }
 
-/* Estilo para a chamada do formulário */
-.form-intro {
-    font-size: 16px;
+.social-proof {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 32px;
+}
+
+.social-proof p {
+    font-size: 18px;
     font-weight: 700;
 }
 
-/* Estilo geral do formulário */
-#main-form {
+.form-intro {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-color-secondary);
+    margin-bottom: 32px;
+}
+
+/* 4. CONTEÚDO PRINCIPAL (FORMULÁRIO E SUCESSO) */
+main {
+    margin-bottom: 64px;
+}
+
+#main-form, #success-message {
     background-color: var(--container-color);
     padding: 32px;
     border-radius: 8px;
-    border: 1
+    border: 1px solid var(--border-color);
+    text-align: left;
+}
+
+#success-message {
+    display: none; /* Começa escondido */
+    text-align: center;
+    padding: 40px;
+}
+
+#success-message h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.success-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color-secondary);
+    margin-bottom: 32px;
+}
+
+.form-group {
+    margin-bottom: 28px;
+}
+
+label, legend {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 16px;
+    font-family: 'Manrope', sans-serif;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px var(--primary-color);
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.radio-option:hover {
+    background-color: #fcfdff;
+    border-color: #c9deef;
+}
+
+.radio-option input[type="radio"] {
+    margin-right: 12px;
+    accent-color: var(--primary-color);
+}
+
+.radio-option label {
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* 5. BOTÕES */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--whatsapp-color);
+    color: white;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.whatsapp-btn:hover {
+    background-color: var(--whatsapp-color-hover);
+}
+
+/* 6. RODAPÉ */
+footer {
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 14px;
+    color: #a0aec0;
+}
