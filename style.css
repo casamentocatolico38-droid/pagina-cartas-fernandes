@@ -3,8 +3,8 @@
 
 /* Reset */
 * {
-  margin: 40;
-  padding: 40;
+  margin: 30;
+  padding: 30;
   box-sizing: border-box;
 }
 
@@ -103,6 +103,7 @@ button:hover {
     font-size: 1rem;
   }
 }
+
 
 
 
