@@ -34,11 +34,11 @@ body {
 
 /* 2. FOTO PEQUENA */
 .foto-perfil {
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%; /* Círculo perfeito */
     object-fit: cover;
-    margin-bottom: 24px; /* "Suspiro" abaixo da foto */
+    margin-bottom: 20px; /* "Suspiro" abaixo da foto */
     border: 3px solid #fff; /* Borda branca para destacar */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -128,3 +128,4 @@ button:hover {
         flex-direction: column; /* No celular, o botão fica embaixo do input */
     }
 }
+
