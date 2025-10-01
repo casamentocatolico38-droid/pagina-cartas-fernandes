@@ -8,31 +8,33 @@
 </head>
 <body>
 
-    <main class="container">
-        <div id="formulario-inscricao">
-            <img src="logo-placeholder" alt="Foto do Fernandes" class="foto-perfil">
-            
-            <h1>Cartas do Fernandes</h1>
-            
-            <p>Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Envio uma nova edição toda segunda-feira, às 12h.</p>
-            
-            <form id="meuFormulario" action="https://formspree.io/f/SEU_CODIGO_UNICO_AQUI" method="POST">
-                <input type="email" id="email" name="email" placeholder="Digite seu melhor e-mail" required>
-                <button type="submit">Quero Receber as Cartas</button>
-            </form>
-        </div>
+    <main class="pagina-dividida">
+        <div class="coluna-imagem">
+            </div>
 
-        <div id="secao-confirmacao" style="display: none;">
-            <img src="logo-placeholder" alt="Foto do Fernandes" class="foto-perfil">
-            <h1>Sua vaga está garantida!</h1>
-            <p>Toque no link abaixo para entrar no Grupo de WhatsApp agora mesmo. Te vejo lá!</p>
-            <a href="LINK_DO_SEU_GRUPO_AQUI" class="botao-whatsapp">Entrar no Grupo</a>
+        <div class="coluna-formulario">
+            <div class="conteudo-formulario">
+
+                <div id="formulario-inscricao">
+                    <h1>Cartas do Fernandes</h1>
+                    <p>Toda semana uma nova carta com reflexões sobre matrimônio e valores de uma família feliz. Envio uma nova edição toda segunda-feira, às 12h.</p>
+                    
+                    <form id="meuFormulario" action="https://formspree.io/f/SEU_CODIGO_UNICO_AQUI" method="POST">
+                        <input type="email" id="email" name="email" placeholder="Seu melhor e-mail" required>
+                        <button type="submit">Quero Receber as Cartas</button>
+                    </form>
+                </div>
+
+                <div id="secao-confirmacao" style="display: none;">
+                    <h1>Sua vaga está garantida!</h1>
+                    <p>Toque no link abaixo para entrar no Grupo de WhatsApp agora mesmo. Te vejo lá!</p>
+                    <a href="LINK_DO_SEU_GRUPO_AQUI" class="botao-whatsapp">Entrar no Grupo de WhatsApp</a>
+                </div>
+            </div>
         </div>
     </main>
 
     <script src="script.js"></script>
+
 </body>
 </html>
-
-
-
