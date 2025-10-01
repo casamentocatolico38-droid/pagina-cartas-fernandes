@@ -1,119 +1,130 @@
-/* Fonte */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+/* --- DESIGN MINIMALISTA - VERSÃO FINAL --- */
 
-/* Reset */
+/* 1. FONTES: Importando a 'Lilita One' para títulos e 'Inter' para textos. */
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Inter:wght@400;600&display=swap');
+
+/* Reset Básico e Estilo do Body */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: 'Lilita One', sans-serif;
-  background-color: #f0f0f0; /* Fundo branco ocupando toda a tela */
-  color: #111;
-  display: flex;
-  justify-content: left;
-  align-items: left;
-  min-height: 100vh;
-  width: 100%;
+    font-family: 'Inter', sans-serif; /* Fonte base para textos, super legível */
+    background-color: #f3f4f6; /* Fundo cinza muito claro */
+    color: #1f2937; /* Cor do texto principal (quase preto) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
-/* Container */
+/* Container Principal */
 .container {
-  width: 100%;
-  max-width: 680px;
-  margin: auto;
+    width: 100%;
+    max-width: 500px; /* Mais estreito, mais minimalista */
+    background-color: #ffffff;
+    padding: 48px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    text-align: center; /* Centraliza tudo dentro do container */
 }
 
-/* Título */
+/* 2. FOTO PEQUENA */
+.foto-perfil {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; /* Círculo perfeito */
+    object-fit: cover;
+    margin-bottom: 24px; /* "Suspiro" abaixo da foto */
+    border: 3px solid #fff; /* Borda branca para destacar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 3. TÍTULO CHAMATIVO com a fonte LILITA ONE */
 h1 {
-  font-size: 2rem;
-  font-weight: 800;
-  text-align: left;
-  margin-bottom: 30px; /* espaço após o título */
-  line-height: 3.0;
+    font-family: 'Lilita One', cursive; /* A fonte que você pediu! */
+    font-size: 3rem; /* Bem grande para chamar atenção */
+    line-height: 1.1;
+    color: #111827;
+    margin-bottom: 16px; /* "Suspiro" abaixo do título */
 }
 
-/* Parágrafo */
+/* Parágrafos com bom "Suspiro" */
 p {
-  font-size: 1.1rem;
-  color: #555;
-  text-align: left;
-  margin-bottom: 32px; /* mais respiro */
-  line-height: 1.6;
+    font-size: 1.1rem;
+    color: #4b5563; /* Cinza escuro para o texto, mais suave */
+    line-height: 1.7; /* Espaço entre as linhas */
+    margin-bottom: 32px; /* Grande "suspiro" final */
 }
 
-/* Formulário */
+/* Formulário Minimalista */
 form {
-  width: 100%;
+    display: flex; /* Coloca o input e o botão na mesma linha */
+    gap: 10px; /* Espaço entre o input e o botão */
 }
 
 input[type="email"] {
-  width: 100%;
-  padding: 16px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  font-size: 1rem;
-  margin-bottom: 20px;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    flex-grow: 1; /* Faz o input ocupar o espaço disponível */
+    padding: 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
 }
 
 input[type="email"]:focus {
-  border-color: #2563eb;
-  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
-  outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+    outline: none;
 }
 
-/* Botão */
 button {
-  width: 100%;
-  padding: 16px;
-  border: none;
-  border-radius: 6px;
-  background-color: #2563eb;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.2s ease;
+    padding: 14px 24px;
+    border: none;
+    border-radius: 8px;
+    background-color: #1f2937; /* Botão escuro, bem minimalista */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 button:hover {
-  background-color: #1e4ed8;
+    background-color: #374151;
+    transform: translateY(-2px); /* Efeito sutil ao passar o mouse */
 }
 
-/* Confirmação */
+/* Seção de Confirmação */
 #secao-confirmacao {
-  margin-top: 32px;
-  font-size: 1rem;
-  text-align: left;
-  color: #2a9d8f;
+    text-align: center;
+}
+.botao-whatsapp {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 20px;
 }
 
-/* Responsivo */
+/* Responsivo para Celulares */
 @media (max-width: 600px) {
-  body {
-    padding: 20px;
-  }
-  h1 {
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1rem;
-  }
+    body { padding: 0; }
+    .container {
+        border-radius: 0;
+        box-shadow: none;
+        padding: 32px;
+        min-height: 100vh;
+    }
+    h1 { font-size: 2.5rem; }
+    form {
+        flex-direction: column; /* No celular, o botão fica embaixo do input */
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
