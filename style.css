@@ -11,7 +11,7 @@
 }
 
 body {
-    font-family: 'Lilita one', sans-serif; /* Fonte base para textos, super legível */
+    font-family: 'Bebas Neue', sans-serif; /* Fonte base para textos, super legível */
     background-color: #E5E5E5; /* Fundo cinza muito claro */
     color: #1f2937; /* Cor do texto principal (quase preto) */
     display: auto;
@@ -19,17 +19,6 @@ body {
     align-items: left;
     min-height: 100vh;
     padding: 40px;
-}
-
-/* Container Principal */
-.container {
-    width: 100%;
-    max-width: 500px; /* Mais estreito, mais minimalista */
-    background-color: #ffffff;
-    padding: 48px;
-    border-radius: 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    text-align: left; /* Centraliza tudo dentro do container */
 }
 
 /* 2. FOTO PEQUENA */
@@ -128,6 +117,7 @@ button:hover {
         flex-direction: column; /* No celular, o botão fica embaixo do input */
     }
 }
+
 
 
 
