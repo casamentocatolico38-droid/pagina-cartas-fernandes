@@ -24,11 +24,9 @@ body {
 .foto-perfil {
     width: 80px;
     height: 80px;
-    border-radius: 50%;
     object-fit: cover;
     margin-bottom: 24px;
     border: 3px solid #fff; /* <<-- NOVO: Borda branca sutil */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* <<-- NOVO: Sombra suave para dar profundidade */
 }
 
 /* 3. TÍTULO CHAMATIVO com a fonte LILITA ONE */
@@ -116,6 +114,7 @@ button:hover {
         flex-direction: column; /* No celular, o botão fica embaixo do input */
     }
 }
+
 
 
 
