@@ -1,0 +1,197 @@
+/* ==========================================================================
+   DESIGN FINAL - CARTAS DO FERNANDES (Suas Especificações)
+   ========================================================================== */
+
+/* 1. FONTES E VARIÁVEIS DE COR
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;600;700&display=swap');
+
+:root {
+    --cinza-suave: #E5E5E5;      /* Base neutra */
+    --dourado-elegante: #C5A300; /* Destaque */
+    --azul-profundo: #1A2B6D;    /* Cor principal para textos e botões */
+    --vermelho-suave: #B23A48;   /* Destaque secundário */
+    --branco-puro: #FFFFFF;     /* Fundo do cartão */
+}
+
+/* 2. CONFIGURAÇÕES GERAIS (RESET E BODY)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    background-color: var(--cinza-suave);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 3. CONTAINER (O CARTÃO BRANCO)
+   ========================================================================== */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--branco-puro);
+    padding: 56px;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    text-align: center;
+}
+
+/* 4. FOTO DE PERFIL
+   ========================================================================== */
+.foto-perfil { /* Certifique-se que no seu index.html a classe da imagem é "foto-perfil" */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 24px;
+    border: 4px solid var(--dourado-elegante); /* Borda dourada como destaque legal */
+}
+
+/* 5. TEXTOS (TÍTULO E PARÁGRAFOS)
+   ========================================================================== */
+h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--azul-profundo);
+    margin-bottom: 24px;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+p strong {
+    color: #333;
+}
+
+/* 6. FORMULÁRIO (COM "SUSPIROS" E "DESTAQUES")
+   ========================================================================== */
+form {
+    text-align: left;
+    margin-top: 48px; /* Grande "suspiro" antes do formulário */
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 32px;
+}
+
+legend, label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--azul-profundo);
+    margin-bottom: 16px;
+    display: block;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Montserrat Alternates', sans-serif;
+    transition: all 0.2s ease;
+}
+
+input[type="email"]:focus {
+    border-color: var(--dourado-elegante);
+    box-shadow: 0 0 0 3px rgba(197, 163, 0, 0.2);
+    outline: none;
+}
+
+.radio-group label {
+    font-weight: 400;
+    color: #333;
+    display: block;
+    padding: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.radio-group label:hover {
+    border-color: var(--dourado-elegante);
+}
+
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+.radio-group input[type="radio"]:checked + label {
+    border-color: var(--azul-profundo);
+    background-color: #f0f3ff; /* Fundo azul bem clarinho ao selecionar */
+    font-weight: 600;
+}
+
+button {
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--azul-profundo);
+    color: var(--branco-puro);
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--dourado-elegante);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* 7. SEÇÃO DE CONFIRMAÇÃO
+   ========================================================================== */
+#secao-confirmacao {
+    text-align: center;
+}
+
+.botao-whatsapp {
+    display: inline-block;
+    padding: 18px 32px;
+    border-radius: 8px;
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: all 0.2s ease;
+}
+.botao-whatsapp:hover {
+    transform: scale(1.05);
+}
+
+
+/* 8. AJUSTES PARA CELULARES
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .container {
+        padding: 24px;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+    }
+    h1 {
+        font-size: 2.2rem;
+    }
+}
