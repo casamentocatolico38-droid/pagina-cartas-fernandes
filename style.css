@@ -29,7 +29,7 @@ body {
     padding: 48px;
     border-radius: 12px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    text-align: center; /* Centraliza tudo dentro do container */
+    text-align: left; /* Centraliza tudo dentro do container */
 }
 
 /* 2. FOTO PEQUENA */
@@ -128,5 +128,6 @@ button:hover {
         flex-direction: column; /* No celular, o botão fica embaixo do input */
     }
 }
+
 
 
